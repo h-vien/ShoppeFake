@@ -3,10 +3,12 @@ import { Switch, Route } from 'react-router-dom'
 import { path } from './constants/path'
 import AuthenticatedGuard from './guards/AuthenticatedGuard'
 import UnauthenticatedGuard from './guards/UnauthenticatedGuard'
+import CartLayout from './layouts/CartLayout/CartLayout'
 import MainLayout from './layouts/MainLayout/MainLayout'
 import RegisterLayout from './layouts/RegisterLayout/RegisterLayout'
 import Login from './pages/Auth/Login/Login'
 import Register from './pages/Auth/Register/Register'
+import Cart from './pages/Cart/Cart'
 import Home from './pages/Home/Home'
 import NotFound from './pages/NotFound/NotFound'
 import ProductDetail from './pages/ProductDetail/ProductDetail'
@@ -43,6 +45,13 @@ export default function Routes() {
           <MainLayout>
             <User />
           </MainLayout>
+        </AuthenticatedGuard>
+      </Route>
+      <Route path={path.cart}>
+        <AuthenticatedGuard>
+          <CartLayout>
+            <Cart />
+          </CartLayout>
         </AuthenticatedGuard>
       </Route>
       <Route path={path.notFound}>

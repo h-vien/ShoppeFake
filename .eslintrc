@@ -15,7 +15,6 @@
         "printWidth": 80,
         "jsxSingleQuote": false
       }
-    ],
-    "no-console": "warn"
+    ]
   }
 }

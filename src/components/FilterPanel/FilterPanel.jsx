@@ -1,15 +1,13 @@
-import React from 'react'
-import * as S from './filterPanel.style'
-import { path } from '../../constants/path'
-import { NavLink, useHistory } from 'react-router-dom'
-import RatingStars from '../RatingStars/RatingStars'
 import PropTypes from 'prop-types'
 import qs from 'query-string'
-
+import React, { useEffect } from 'react'
 import { Controller, useForm } from 'react-hook-form'
-import { useEffect } from 'react'
+import { NavLink, useHistory } from 'react-router-dom'
+import { path } from '../../constants/path'
+import RatingStars from '../RatingStars/RatingStars'
+import * as S from './filterPanel.style'
+
 export default function FilterPanel({ categories, filters }) {
-  console.log('categories', categories)
   const history = useHistory()
   const {
     control,
