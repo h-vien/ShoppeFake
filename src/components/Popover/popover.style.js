@@ -26,9 +26,9 @@ export const Drawer = styled.div`
     content: '';
     opacity: 1;
     width: 100%;
-    top: -30px;
+    top: -15px;
     left: 0;
-    height: 50px;
+    height: 20px;
   }
 `
 export const PopoverArrow = styled.div`

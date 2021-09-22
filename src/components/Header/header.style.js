@@ -35,6 +35,7 @@ export const CartIcon = styled(Link)`
   padding: 10px;
   display: inline-block;
   position: relative;
+  cursor: pointer;
   svg {
     color: #fff;
     stroke: #fff;

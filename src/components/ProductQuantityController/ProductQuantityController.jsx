@@ -1,7 +1,16 @@
 import React from 'react'
 import * as S from './productQuantityController.stye'
 import PropTypes from 'prop-types'
-export default function ProductQuantityController({ value, max, onChange }) {
+export default function ProductQuantityController({
+  value,
+  max,
+  onChange,
+  onIncrease,
+  onDecrease,
+  onInput,
+  onBlur,
+  disabled
+}) {
   const handleChange = value => {
     let _value = Number(value)
     if (_value > max) {
@@ -10,6 +19,7 @@ export default function ProductQuantityController({ value, max, onChange }) {
       _value = 1
     }
     onChange && onChange(_value)
+    onInput && onInput(_value)
   }
   const increase = () => {
     let _value = value + 1
@@ -17,6 +27,7 @@ export default function ProductQuantityController({ value, max, onChange }) {
       _value = max
     }
     onChange && onChange(_value)
+    onIncrease && onIncrease(_value)
   }
   const decrease = () => {
     let _value = value - 1
@@ -24,11 +35,20 @@ export default function ProductQuantityController({ value, max, onChange }) {
       _value = 1
     }
     onChange && onChange(_value)
+    onDecrease && onDecrease(_value)
+  }
+  const handleBlur = value => {
+    onBlur && onBlur(Number(value))
   }
   return (
     <div>
       <S.ProductQuantityController>
-        <S.ProductQuantityButton onClick={decrease}>
+        <S.ProductQuantityButton
+          onClick={() => {
+            !disabled && decrease()
+          }}
+          disabled={disabled}
+        >
           <svg
             enable-background="new 0 0 10 10"
             viewBox="0 0 10 10"
@@ -43,8 +63,15 @@ export default function ProductQuantityController({ value, max, onChange }) {
           value={value}
           max={max}
           onChange={handleChange}
+          onBlur={handleBlur}
+          disabled={disabled}
         />
-        <S.ProductQuantityButton onClick={increase}>
+        <S.ProductQuantityButton
+          onClick={() => {
+            !disabled && increase()
+          }}
+          disabled={disabled}
+        >
           <svg
             enableBackground="new 0 0 10 10"
             viewBox="0 0 10 10"
