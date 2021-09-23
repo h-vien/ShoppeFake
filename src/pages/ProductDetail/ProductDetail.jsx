@@ -37,7 +37,7 @@ export default function ProductDetail() {
     const res = await dispatch(addToCart(body)).then(unwrapResult)
     await dispatch(getCartPurchases()).then(unwrapResult)
     toast.success(res.message, {
-      position: 'top-center',
+      position: 'top-right',
       autoClose: 4000
     })
   }

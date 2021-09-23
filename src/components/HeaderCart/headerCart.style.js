@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { Button } from "../../assets/styles/utils";
-
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+import { Button } from '../../assets/styles/utils'
 
 export const Header = styled.header`
   margin-bottom: 3rem;
