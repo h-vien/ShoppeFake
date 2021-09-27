@@ -6,7 +6,6 @@ import ProductQuantityController from '../../components/ProductQuantityControlle
 import { formatMoney } from '../../utils/helper'
 import {
   buyPurchase,
-  BuyPurchase,
   deletePurchase,
   getCartPurchases,
   updatePurchase
