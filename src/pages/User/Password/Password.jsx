@@ -31,7 +31,7 @@ export default function Password() {
           </S.InputLabelContent>
         </S.InputLabel>
         <S.Submit>
-          <S.ButtonSubmit type="submit">Lưu</S.ButtonSubmit>
+          <S.ButtonSubmit type="submit">Lưu mật khẩu</S.ButtonSubmit>
         </S.Submit>
       </PasswordContent>
     </S.Profile>
