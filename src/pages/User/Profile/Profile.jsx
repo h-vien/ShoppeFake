@@ -6,7 +6,7 @@ export default function Profile() {
   return (
     <S.Profile>
       <S.ProfileHeader>
-        <S.ProfileTitle>Hồ sơ của tôi</S.ProfileTitle>
+        <S.ProfileHeaderTitle>Hồ sơ của tôi</S.ProfileHeaderTitle>
         <S.ProfileHeaderSubtitle>
           Quản lý thông tin hồ sơ để bảo mật tài khoản
         </S.ProfileHeaderSubtitle>

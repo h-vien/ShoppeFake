@@ -12,7 +12,7 @@ export const ProfileHeader = styled.div`
   padding: 22px 0;
   border-bottom: 1px solid #efefef;
 `
-export const ProfileTitle = styled.div`
+export const ProfileHeaderTitle = styled.div`
   text-transform: capitalize;
   font-size: 1.8rem;
   font-weight: 500;
