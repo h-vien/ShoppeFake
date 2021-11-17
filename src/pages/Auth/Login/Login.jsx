@@ -33,10 +33,12 @@ export default function Login() {
       email: data.email,
       password: data.password
     }
+    console.log(data)
     try {
       const res = await dispatch(login(body))
       unwrapResult(res)
       history.push(path.home)
+      console.log(res)
     } catch (error) {
       if (error.status === 422) {
         for (const key in error.data) {
