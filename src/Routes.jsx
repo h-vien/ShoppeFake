@@ -13,6 +13,9 @@ import Home from './pages/Home/Home'
 import NotFound from './pages/NotFound/NotFound'
 import ProductDetail from './pages/ProductDetail/ProductDetail'
 import User from './pages/User/User'
+
+//Lazy Load
+
 export default function Routes() {
   return (
     <Switch>

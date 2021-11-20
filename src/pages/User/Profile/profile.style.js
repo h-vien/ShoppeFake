@@ -28,7 +28,7 @@ export const ProfileInfo = styled.div`
   align-items: flex-start;
   padding-top: 30px;
 `
-export const ProfileLeft = styled.div`
+export const ProfileLeft = styled.form`
   padding-right: 50px;
   flex-grow: 1;
 `
@@ -107,4 +107,8 @@ export const AvatarUploaderTextContainer = styled.div`
   > div {
     color: #999;
   }
+`
+export const ErrorMessage = styled.div`
+  width: 100%;
+  padding-left: calc(20% + 2rem);
 `

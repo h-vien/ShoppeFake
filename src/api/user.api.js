@@ -3,7 +3,7 @@ import http from '../utils/http'
 const URL = 'user'
 
 const userApi = {
-  updatMe(data) {
+  updateMe(data) {
     return http.put(`${URL}`, data)
   }
 }

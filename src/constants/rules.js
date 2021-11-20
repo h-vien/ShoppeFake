@@ -1,5 +1,23 @@
 import { isEmail } from '../utils/helper'
 export const rules = {
+  name: {
+    maxLength: {
+      value: 160,
+      massage: 'Tên tối đa 160 kí tự'
+    }
+  },
+  phone: {
+    maxLength: {
+      value: 20,
+      massage: 'Số điện thoại có tối đa 20 kí tự'
+    }
+  },
+  address: {
+    maxLength: {
+      value: 160,
+      massage: 'Địa chỉ có tối đa 160 kí tự'
+    }
+  },
   email: {
     required: {
       value: true,
