@@ -1,12 +1,14 @@
 import { unwrapResult } from '@reduxjs/toolkit'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Suspense } from 'react'
 import { useDispatch } from 'react-redux'
 
 import FilterPanel from '../../components/FilterPanel/FilterPanel'
+import Loading from '../../components/Loading/Loading'
 import SearchItemResult from '../../components/SearchItemResult/SearchItemResult'
 import useQuery from '../../hooks/useQuery'
 import { getCategories, getProducts } from './home.slice'
 import * as S from './home.style'
+
 export default function Home() {
   const [categories, setCategories] = useState([])
   const [products, setProducts] = useState({
@@ -65,7 +67,9 @@ export default function Home() {
           <FilterPanel categories={categories} filters={filters} />
         </S.Side>
         <S.Main>
-          <SearchItemResult products={products} filters={filters} />
+          <Suspense fallback={<Loading />}>
+            <SearchItemResult products={products} filters={filters} />
+          </Suspense>
         </S.Main>
       </S.Container>
     </div>
