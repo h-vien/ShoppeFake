@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react'
 import { Switch, Route } from 'react-router-dom'
-import Loading from './components/Loading/Loading'
+import Loader from './components/Loader/Loader'
 import { path } from './constants/path'
 import AuthenticatedGuard from './guards/AuthenticatedGuard'
 import UnauthenticatedGuard from './guards/UnauthenticatedGuard'
@@ -22,14 +22,14 @@ export default function Routes() {
     <Switch>
       <Route path={path.home} exact>
         <MainLayout>
-          <Suspense fallback={<Loading />}>
+          <Suspense fallback={<Loader />}>
             <Home />
           </Suspense>
         </MainLayout>
       </Route>
       <Route path={path.productDetail} exact>
         <MainLayout>
-          <Suspense fallback={<Loading />}>
+          <Suspense fallback={<Loader />}>
             <ProductDetail />
           </Suspense>
         </MainLayout>
@@ -37,7 +37,7 @@ export default function Routes() {
       <Route path={path.login}>
         <UnauthenticatedGuard>
           <RegisterLayout title="Đăng nhập">
-            <Suspense fallback={<Loading />}>
+            <Suspense fallback={<Loader />}>
               <Login />
             </Suspense>
           </RegisterLayout>
@@ -46,7 +46,7 @@ export default function Routes() {
       <Route path={path.register}>
         <UnauthenticatedGuard>
           <RegisterLayout title="Đăng kí">
-            <Suspense fallback={<Loading />}>
+            <Suspense fallback={<Loader />}>
               <Register />
             </Suspense>
           </RegisterLayout>
@@ -62,7 +62,7 @@ export default function Routes() {
       <Route path={path.cart}>
         <AuthenticatedGuard>
           <CartLayout>
-            <Suspense fallback={<Loading />}>
+            <Suspense fallback={<Loader />}>
               <Cart />
             </Suspense>
           </CartLayout>

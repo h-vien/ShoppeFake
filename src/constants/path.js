@@ -20,7 +20,7 @@ class Path {
     this.login = '/login'
     this.register = '/register'
     this.product = '/product'
-    this.productDetail = '/productthis./:idProduct'
+    this.productDetail = '/product/:idProduct'
     this.user = '/user'
     this.cart = '/cart'
     this.profile = this.user + '/profile'
