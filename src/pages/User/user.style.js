@@ -64,7 +64,7 @@ export const SidebarMenuEntry = styled(NavLink)`
   color: rgba(0, 0, 0, 0.8);
   &:hover,
   &.active {
-    color: #ee4d2d;
+    color: #1597e5;
   }
 `
 export const SidebarMenuEntryIcon = styled.div`

@@ -8,6 +8,7 @@ import { getPurchases } from '../user.slice'
 import { formatMoney, generateNameId } from '../../../utils/helper'
 import qs from 'query-string'
 import * as S from './purchase.style'
+import { Helmet } from 'react-helmet-async'
 export default function Purchase() {
   const [purchases, setPurchases] = useState([])
   const dispatch = useDispatch()
@@ -22,6 +23,9 @@ export default function Purchase() {
   console.log(purchases)
   return (
     <div>
+      <Helmet>
+        <title>Đơn mua</title>
+      </Helmet>
       <S.PurchaseTabs>
         <S.PurchaseTabItem
           className="active"

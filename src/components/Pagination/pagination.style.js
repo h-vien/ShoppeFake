@@ -26,10 +26,10 @@ export const ButtonIcon = styled(ButtonPagination)`
 export const ButtonNoOutLine = styled(ButtonPagination)`
   &.active {
     color: #fff;
-    background: #ee4d2d;
+    background: #1597e5;
     transition: background 0.2s ease;
     &:hover {
-      background: #f05d40;
+      background: #193498;
     }
   }
 `

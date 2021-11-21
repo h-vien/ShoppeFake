@@ -23,8 +23,8 @@ export const PurchaseTabItem = styled(NavLink)`
   justify-content: center;
   color: inherit;
   &.active {
-    color: #ee4d2d;
-    border-bottom: 2px solid #ee4d2d;
+    color: #1597e5;
+    border-bottom: 2px solid #1597e5;
   }
 `
 export const PurchaseList = styled.div``
@@ -82,6 +82,6 @@ export const TotalPriceLabel = styled.div`
   margin-right: 1rem;
 `
 export const TotalPricePrice = styled.div`
-  color: #ee4d2d;
+  color: #1597e5;
   font-size: 3rem;
 `

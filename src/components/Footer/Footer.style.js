@@ -22,7 +22,7 @@ export const Language = styled.div`
       border-right: 1px solid rgba(0, 0, 0, 0.2);
     }
     &.active {
-      color: #ee4d2d;
+      color: #1597e5;
     }
   }
 `

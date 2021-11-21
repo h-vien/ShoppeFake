@@ -11,6 +11,7 @@ import ErrorMessage from '../../../components/ErrorMessage/ErrorMessage'
 import { updateMe } from '../../Auth/auth.slice'
 import { unwrapResult } from '@reduxjs/toolkit'
 import { toast } from 'react-toastify'
+import { Helmet } from 'react-helmet-async'
 export default function Profile() {
   const profile = useSelector(state => state.auth.profile)
   const {
@@ -69,6 +70,9 @@ export default function Profile() {
     ) || 'Ngày không đusng'
   return (
     <S.Profile>
+      <Helmet>
+        <title>Hồ sơ của tôi</title>
+      </Helmet>
       <S.ProfileHeader>
         <S.ProfileHeaderTitle>Hồ sơ của tôi</S.ProfileHeaderTitle>
         <S.ProfileHeaderSubtitle>

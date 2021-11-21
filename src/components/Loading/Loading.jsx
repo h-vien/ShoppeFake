@@ -12,7 +12,7 @@ const StyleProgress = styled(LinearProgress)`
 export default function Loading() {
   const loading = useSelector(state => state.app.loading)
   if (loading > 0) {
-    return <StyleProgress color="secondary" />
+    return <StyleProgress color="primary" />
   } else {
     return null
   }

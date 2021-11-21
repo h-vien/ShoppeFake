@@ -64,7 +64,7 @@ export const ProductImage = styled.div`
   img {
     max-width: 100%;
     max-height: 100%;
-    border: 2px solid ${({ active }) => (active ? '#ee4d2d' : 'transparent')};
+    border: 2px solid ${({ active }) => (active ? '#1597E5' : 'transparent')};
   }
 `
 export const ProductMeta = styled.div`
@@ -98,8 +98,8 @@ const ProductMeta1Item = styled.div`
 `
 export const ProductRating = styled(ProductMeta1Item)`
   span {
-    color: #ee4d2d;
-    border-bottom: 1px solid #ee4d2d;
+    color: #ee4d22;
+    border-bottom: 1px solid #ee4d22;
     font-size: 1.6rem;
     margin-right: 0.5rem;
   }
@@ -108,8 +108,8 @@ export const ProductRating = styled(ProductMeta1Item)`
     height: 1.4rem;
   }
   ${RatingStarPercent} svg {
-    color: #ee4d2d;
-    fill: #ee4d2d;
+    color: #ee4d22;
+    fill: #ee4d22;
   }
 `
 export const ProductSold = styled(ProductMeta1Item)`
@@ -171,23 +171,23 @@ export const ProductBuyQuantityController = styled.div`
 `
 export const ProductBuyQuantityQuantity = styled.div``
 export const ProductButtons = styled(Button)`
-  background: rgba(255, 87, 34, 0.1);
-  border: 1px solid #ee4d2d;
+  background: #1597e520;
+  border: 1px solid #1597e5;
   box-shadow: 0 1px 1px 0 rgb(0 0 0 / 3%);
-  color: #ee4d2d;
+  color: #1597e5;
   margin-right: 15px;
   padding: 0 1.2rem;
   font-size: 14px;
   height: 48px;
   svg {
     margin-right: 10px;
-    color: #ee4d2d;
-    stroke: #ee4d2d;
+    color: #1597e5;
+    stroke: #1597e5;
     width: 2rem;
     height: 2rem;
   }
   &:hover {
-    background: rgba(255, 87, 34, 0.15);
+    background: #1597e520;
   }
 `
 export const ProductContent = styled.div`

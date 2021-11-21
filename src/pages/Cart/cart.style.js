@@ -104,7 +104,7 @@ export const CartItemQuantity = styled(ProductHeaderQuantity)``
 export const CartItemTotalPrice = styled(ProductHeaderTotalPrice)`
   span {
     text-align: right;
-    color: #ee4d2d;
+    color: #1597e5;
   }
 `
 export const CartItemAction = styled(ProductHeaderAction)``
@@ -114,7 +114,7 @@ export const CartItemActionButton = styled.button`
   border: none;
   transition: color 0.1s ease;
   :hover {
-    color: #ee4d2d;
+    color: #1597e5;
   }
 `
 export const CartFooter = styled.div`
@@ -162,7 +162,7 @@ export const CartFooterPriceTop = styled.div`
     :last-child {
       font-size: 2.4rem;
       margin-left: 5px;
-      color: #ee4d2d;
+      color: #1597e5;
     }
   }
 `
@@ -175,7 +175,7 @@ export const CartFooterPriceBot = styled.div`
       font-size: 1.4rem;
     }
     :last-child {
-      color: #ee4d2d;
+      color: #1597E5;
       padding-left: 2.4rem;
     }
   }

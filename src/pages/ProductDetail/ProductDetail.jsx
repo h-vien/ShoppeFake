@@ -15,6 +15,7 @@ import ProductQuantityController from '../../components/ProductQuantityControlle
 import DOMPurify from 'dompurify'
 import { toast } from 'react-toastify'
 import { getCartPurchases } from '../Cart/cart.slice'
+import { Helmet } from 'react-helmet-async'
 export default function ProductDetail() {
   const [product, setProduct] = useState()
   const [currentImg, setCurrentImg] = useState({})
@@ -76,6 +77,9 @@ export default function ProductDetail() {
     <div>
       {product && (
         <div className="container">
+          <Helmet>
+            <title>{product.nam}</title>
+          </Helmet>
           <S.ProductBriefing>
             <S.ProductImages>
               <S.ProductActive>

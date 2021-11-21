@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Button, ButtonLink } from '../../assets/styles/utils'
 
 export const StyledHeader = styled.header`
-  background: linear-gradient(-180deg, #f53d2d, #f63);
+  background: linear-gradient(-180deg, #193498, #1597e5);
   margin-bottom: 3rem;
   width: 100%;
   min-width: max-content;
@@ -50,8 +50,8 @@ export const CartNumberBadge = styled.div`
   min-width: 11px;
   padding: 0 5px;
   text-align: center;
-  border: 2px solid #ee4d2d;
-  color: #ee4d2d;
+  border: 2px solid #1597e5;
+  color: #1597e5;
   background-color: #fff;
   line-height: 1;
   top: 2px;
@@ -116,7 +116,7 @@ export const MiniProductCartTitle = styled.div`
 export const MiniProductCartPrice = styled.div`
   margin-left: 4rem;
   flex-shrink: 1;
-  color: #ee4d2d;
+  color: #1597e5;
 `
 export const PopoverFooter = styled.div`
   display: flex;

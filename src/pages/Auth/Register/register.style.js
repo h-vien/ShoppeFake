@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Button } from '../../../assets/styles/utils'
 export const StyledRegister = styled.div`
-  background-color: rgb(238, 77, 45);
+  background-color: #1597e5;
   min-width: max-content;
 `
 export const Container = styled.div`

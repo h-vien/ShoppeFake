@@ -10,7 +10,7 @@ export const Header = styled.header`
   border-bottom: 1px solid rgba(0, 0, 0, 0.09);
 `
 export const Navbar = styled.div`
-  background: linear-gradient(-180deg, #f53d2d, #f63);
+  background: linear-gradient(-180deg, #193498, #1597e5);
   color: #fff;
 `
 export const SearchWrap = styled.div`
@@ -28,14 +28,14 @@ export const Logo = styled(Link)`
     width: 13rem;
     height: auto;
     cursor: pointer;
-    fill: #ee4d2d;
+    fill: #1597e5;
   }
 `
 export const LogoPageName = styled.div`
   margin-left: 1.5rem;
   margin-top: 1rem;
-  border-left: 1px solid #ee4d2d;
-  color: #ee4d2d;
+  border-left: 1px solid #1597e5;
+  color: #1597e5;
   font-size: 2rem;
   line-height: 1.5;
   padding-left: 1.5rem;
@@ -45,7 +45,7 @@ export const Form = styled.form`
   flex: 0 0 50%;
   display: flex;
   align-items: stretch;
-  border: 1px solid #ee4d2d;
+  border: 1px solid #1597e5;
   height: 3.6rem;
   border-radius: 2px;
   background: #fff;

@@ -1,5 +1,6 @@
 import { unwrapResult } from '@reduxjs/toolkit'
 import React, { useState, useEffect, Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { useDispatch } from 'react-redux'
 
 import FilterPanel from '../../components/FilterPanel/FilterPanel'
@@ -61,6 +62,9 @@ export default function Home() {
   }, [query, dispatch])
   return (
     <div>
+      <Helmet>
+        <title>N3iV Shop | Mua bán đêi</title>
+      </Helmet>
       <S.Container className="container">
         <S.Side>
           <FilterPanel categories={categories} filters={filters} />

@@ -18,7 +18,7 @@ export const HeaderBrand = styled.div`
 export const HeaderIcon = styled(Link)`
   margin-top: -0.5rem;
   svg {
-    fill: #ee4d2d;
+    fill: #1597e5;
     height: 4.2rem;
     width: auto;
   }

@@ -67,18 +67,18 @@ export const ProductItemPriceOriginal = styled.div`
 `
 export const ProductItemPriceSale = styled.div`
   flex-grow: 1;
-  color: #ee4d2d;
+  color: #1597e5;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   span {
     &:first-child {
       font-size: 1.2rem;
-      color: #ee4d2d;
+      color: #1597e5;
     }
     &:last-child {
       font-size: 1.6rem;
-      color: #ee4d2d;
+      color: #1597e5;
     }
   }
 `

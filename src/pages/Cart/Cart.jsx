@@ -13,6 +13,7 @@ import {
 import keyBy from 'lodash/keyBy'
 import * as S from './cart.style'
 import { toast } from 'react-toastify'
+import { Helmet } from 'react-helmet-async'
 function Cart() {
   const purchases = useSelector(state => state.cart.purchases)
   const dispatch = useDispatch()
@@ -157,67 +158,69 @@ function Cart() {
   }
   return (
     <div className="container">
-      <div>
-        <S.ProductHeader>
-          <S.ProductHeaderCheckbox>
-            <CheckBox onChange={handleCheckAll} checked={isCheckedAll} />
-          </S.ProductHeaderCheckbox>
-          <S.ProductHeaderName>Sản phẩm</S.ProductHeaderName>
-          <S.ProductHeaderUnitPrice>Đơn giá</S.ProductHeaderUnitPrice>
-          <S.ProductHeaderQuantity>Số lượng</S.ProductHeaderQuantity>
-          <S.ProductHeaderTotalPrice>Số tiền</S.ProductHeaderTotalPrice>
-          <S.ProductHeaderAction>Thao tác</S.ProductHeaderAction>
-        </S.ProductHeader>
-        <S.ProductSection>
-          {localPurchases.map((purchase, idx) => (
-            <S.CartItem key={purchase._id}>
-              <S.CartItemCheckbox>
-                <CheckBox
-                  onChange={handleCheck(idx)}
-                  checked={purchase.checked}
-                />
-              </S.CartItemCheckbox>
-              <S.CartItemOverview>
-                <S.CartItemOverviewImage to="">
-                  <img src={purchase.product.image} alt="" />
-                </S.CartItemOverviewImage>
-                <S.CartItemOverviewNameWrapper>
-                  <S.CartItemOverviewName to="">
-                    {purchase.product.name}
-                  </S.CartItemOverviewName>
-                </S.CartItemOverviewNameWrapper>
-              </S.CartItemOverview>
-              <S.CartItemUnitPrice>
-                <span>
-                  đ{formatMoney(purchase.product.price_before_discount)}{' '}
-                </span>
-                <span>đ{formatMoney(purchase.product.price)}</span>
-              </S.CartItemUnitPrice>
-              <S.CartItemQuantity>
-                <ProductQuantityController
-                  value={purchase.buy_count}
-                  max={purchase.product.quantity}
-                  onInput={handleInputQuantity(idx)}
-                  onBlur={handleBlurQuantity(idx)}
-                  disabled={purchase.disabled}
-                  onIncrease={handleIncreaseAndDecrease(idx)}
-                  onDecrease={handleIncreaseAndDecrease(idx)}
-                />
-              </S.CartItemQuantity>
-              <S.CartItemTotalPrice>
-                <span>
-                  đ{formatMoney(purchase.product.price * purchase.buy_count)}
-                </span>
-              </S.CartItemTotalPrice>
-              <S.CartItemAction>
-                <S.CartItemActionButton onClick={handleRemove(idx)}>
-                  Xoá
-                </S.CartItemActionButton>
-              </S.CartItemAction>
-            </S.CartItem>
-          ))}
-        </S.ProductSection>
-      </div>
+      <Helmet>
+        <title>Giỏ hàng</title>
+      </Helmet>
+      <S.ProductHeader>
+        <S.ProductHeaderCheckbox>
+          <CheckBox onChange={handleCheckAll} checked={isCheckedAll} />
+        </S.ProductHeaderCheckbox>
+        <S.ProductHeaderName>Sản phẩm</S.ProductHeaderName>
+        <S.ProductHeaderUnitPrice>Đơn giá</S.ProductHeaderUnitPrice>
+        <S.ProductHeaderQuantity>Số lượng</S.ProductHeaderQuantity>
+        <S.ProductHeaderTotalPrice>Số tiền</S.ProductHeaderTotalPrice>
+        <S.ProductHeaderAction>Thao tác</S.ProductHeaderAction>
+      </S.ProductHeader>
+      <S.ProductSection>
+        {localPurchases.map((purchase, idx) => (
+          <S.CartItem key={purchase._id}>
+            <S.CartItemCheckbox>
+              <CheckBox
+                onChange={handleCheck(idx)}
+                checked={purchase.checked}
+              />
+            </S.CartItemCheckbox>
+            <S.CartItemOverview>
+              <S.CartItemOverviewImage to="">
+                <img src={purchase.product.image} alt="" />
+              </S.CartItemOverviewImage>
+              <S.CartItemOverviewNameWrapper>
+                <S.CartItemOverviewName to="">
+                  {purchase.product.name}
+                </S.CartItemOverviewName>
+              </S.CartItemOverviewNameWrapper>
+            </S.CartItemOverview>
+            <S.CartItemUnitPrice>
+              <span>
+                đ{formatMoney(purchase.product.price_before_discount)}{' '}
+              </span>
+              <span>đ{formatMoney(purchase.product.price)}</span>
+            </S.CartItemUnitPrice>
+            <S.CartItemQuantity>
+              <ProductQuantityController
+                value={purchase.buy_count}
+                max={purchase.product.quantity}
+                onInput={handleInputQuantity(idx)}
+                onBlur={handleBlurQuantity(idx)}
+                disabled={purchase.disabled}
+                onIncrease={handleIncreaseAndDecrease(idx)}
+                onDecrease={handleIncreaseAndDecrease(idx)}
+              />
+            </S.CartItemQuantity>
+            <S.CartItemTotalPrice>
+              <span>
+                đ{formatMoney(purchase.product.price * purchase.buy_count)}
+              </span>
+            </S.CartItemTotalPrice>
+            <S.CartItemAction>
+              <S.CartItemActionButton onClick={handleRemove(idx)}>
+                Xoá
+              </S.CartItemActionButton>
+            </S.CartItemAction>
+          </S.CartItem>
+        ))}
+      </S.ProductSection>
+
       <S.CartFooter>
         <S.CartFooterCheckbox>
           <CheckBox onChange={handleCheckAll} checked={isCheckedAll} />

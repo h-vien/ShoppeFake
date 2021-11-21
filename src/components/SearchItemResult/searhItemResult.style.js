@@ -35,7 +35,7 @@ export const SortByOptionsOption = styled.div`
   text-transform: capitalize;
   &.active {
     color: #fff;
-    background: #ee4d2d;
+    background: #1597e5;
   }
 `
 
@@ -46,7 +46,7 @@ export const SortByPrice = styled.select`
   border: 0;
   padding: 0 1.5rem;
   &.active {
-    color: #ee4d2d;
+    color: #1597e5;
   }
 `
 
@@ -60,7 +60,7 @@ export const MiniPageControllerState = styled.div`
 `
 
 export const MiniPageControllerCurrentState = styled.div`
-  color: #ee4d2d;
+  color: #1597e5;
 `
 
 export const MiniPageControllerTotalState = styled.div`

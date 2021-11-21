@@ -9,7 +9,7 @@ export default function Footer() {
     <S.Footer>
       <div className="container">
         <S.Footer1>
-          <div>© 2021 Shopee. Tất cả các quyền được bảo lưu.</div>
+          <div>© 2021 N3iV shop. Tất cả các quyền được bảo lưu.</div>
           <S.Language>
             {t('footer.language')}:
             <span
@@ -28,17 +28,17 @@ export default function Footer() {
           </S.Language>
         </S.Footer1>
         <S.Footer2>
-          <div>Công ty TNHH Shopee</div>
+          <div>Công ty TNHH N3iV shop</div>
           <div>
-            Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai,
-            Phường Ngọc Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam. Tổng
-            đài hỗ trợ: 19001221 - Email: cskh@hotro.shopee.vn
+            Địa chỉ: Tầng 4-5-6, Tòa nhà ABC, số 29 đường Điện Biên Phủ, Thành
+            phố Đà Nẵng, Việt Nam. Tổng đài hỗ trợ: 199000222 - Email:
+            cskh@hotro.N3iV shop.vn
           </div>
           <div>
-            Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp
-            lần đầu ngày 10/02/2015
+            Mã số doanh nghiệp: 19990002213 do Sở Kế hoạch & Đầu tư TP Đà Nẵng
+            cấp lần đầu ngày 10/02/2015
           </div>
-          <div>© 2015 - Bản quyền thuộc về Công ty TNHH Shopee</div>
+          <div>© 2015 - Bản quyền thuộc về Công ty TNHH N3iV shop</div>
         </S.Footer2>
       </div>
     </S.Footer>

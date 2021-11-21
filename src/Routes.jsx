@@ -55,7 +55,9 @@ export default function Routes() {
       <Route path={path.user}>
         <AuthenticatedGuard>
           <MainLayout>
-            <User />
+            <Suspense fallback={<Loader />}>
+              <User />
+            </Suspense>
           </MainLayout>
         </AuthenticatedGuard>
       </Route>

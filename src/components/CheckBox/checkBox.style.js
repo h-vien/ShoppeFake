@@ -37,8 +37,8 @@ export const CheckBoxInput = styled.input`
   top: 0;
   left: 0;
   :checked ~ ${CheckBoxBox} {
-    background: #ee4d2d;
-    border-color: #ee4d2d;
+    background: #1597e5;
+    border-color: #1597e5;
   }
   :checked ~ ${CheckBoxBox}:before {
     display: block;
