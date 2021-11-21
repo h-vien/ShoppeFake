@@ -78,7 +78,7 @@ export default function ProductDetail() {
       {product && (
         <div className="container">
           <Helmet>
-            <title>{product.nam}</title>
+            <title>{product.name}</title>
           </Helmet>
           <S.ProductBriefing>
             <S.ProductImages>
