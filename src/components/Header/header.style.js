@@ -3,7 +3,13 @@ import styled from 'styled-components'
 import { Button, ButtonLink } from '../../assets/styles/utils'
 
 export const StyledHeader = styled.header`
-  background: linear-gradient(-180deg, #193498, #1597e5);
+  background: rgb(21, 151, 229);
+  background: linear-gradient(
+    180deg,
+    rgba(21, 151, 229, 1) 9%,
+    rgba(113, 202, 255, 1) 100%,
+    rgba(255, 255, 255, 1) 100%
+  );
   margin-bottom: 3rem;
   width: 100%;
   min-width: max-content;
