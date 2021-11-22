@@ -37,7 +37,7 @@ export default function Home() {
     const _filters = {
       ...query,
       page: query.page || 1,
-      limit: query.limit || 30,
+      limit: query.limit || 10,
       sortBy: query.sortBy || 'view'
     }
     setFilters(_filters)

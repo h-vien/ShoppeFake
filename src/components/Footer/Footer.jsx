@@ -9,7 +9,7 @@ export default function Footer() {
     <S.Footer>
       <div className="container">
         <S.Footer1>
-          <div>© 2021 N3iV shop. Tất cả các quyền được bảo lưu.</div>
+          <div>© 2021 N3iV shop.{t('footer.desc')}.</div>
           <S.Language>
             {t('footer.language')}:
             <span
@@ -24,7 +24,12 @@ export default function Footer() {
             >
               Tiếng Anh
             </span>
-            <span>Tiếng Trung</span>
+            <span
+              onClick={() => changeLanguage('chi')}
+              className={classNames({ active: i18n.language === 'chi' })}
+            >
+              Tiếng Trung
+            </span>
           </S.Language>
         </S.Footer1>
         <S.Footer2>
