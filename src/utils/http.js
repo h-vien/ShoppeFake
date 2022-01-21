@@ -6,12 +6,13 @@ class Http {
   constructor() {
     this.instance = axios.create({
       baseURL: process.env.REACT_APP_API,
-      name: ' Huỳnh Đinh Hoang Viên',
+      name: ' Shopee app',
       timeout: 10000,
       headers: {
         'Content-Type': 'application/json'
       }
     })
+    //Interceptor la trung gian, dung de config request trc khi gui len server hoc config respone khi dc xu ly boi then va catch
     this.instance.interceptors.response.use(
       response => {
         const result = { ...response.data, status: response.status }

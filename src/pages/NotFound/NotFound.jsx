@@ -15,7 +15,7 @@ export default function NotFound() {
   //   setTimeout(redirectPage, 10000)
   return (
     <div id="app">
-      <div id="app-not-found">
+      {/* <div id="app-not-found">
         <div className="not-found">
           <div className="dot dot1" />
           <div className="dot dot2" />
@@ -46,7 +46,8 @@ export default function NotFound() {
           You will be redirected to our website in <span id="seconds">10 </span>
           seconds
         </p>
-      </div>
+      </div> */}
+      <h1>Not found</h1>
     </div>
   )
 }

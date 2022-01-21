@@ -1,6 +1,9 @@
 import { createNextState, unwrapResult } from '@reduxjs/toolkit'
+import keyBy from 'lodash/keyBy'
 import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { useDispatch, useSelector } from 'react-redux'
+import { toast } from 'react-toastify'
 import CheckBox from '../../components/CheckBox/CheckBox'
 import ProductQuantityController from '../../components/ProductQuantityController/ProductQuantityController'
 import { formatMoney } from '../../utils/helper'
@@ -10,10 +13,7 @@ import {
   getCartPurchases,
   updatePurchase
 } from './cart.slice'
-import keyBy from 'lodash/keyBy'
 import * as S from './cart.style'
-import { toast } from 'react-toastify'
-import { Helmet } from 'react-helmet-async'
 function Cart() {
   const purchases = useSelector(state => state.cart.purchases)
   const dispatch = useDispatch()
