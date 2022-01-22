@@ -3,6 +3,7 @@ import http from '../utils/http'
 const URL = 'products'
 export const productApi = {
   getProducts(config) {
+    console.log(config)
     return http.get(URL, config)
   },
   getProductDetail(id) {

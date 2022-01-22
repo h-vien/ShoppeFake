@@ -30,6 +30,7 @@ export default function FilterPanel({ categories, filters }) {
     setValue('maxPrice', filters.maxPrice || '')
   }, [setValue, filters])
   const searchPrice = data => {
+    console.log(data)
     const { minPrice, maxPrice } = data
     if (minPrice !== '' || maxPrice !== '') {
       let _filters = filters

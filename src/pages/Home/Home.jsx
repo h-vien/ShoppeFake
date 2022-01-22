@@ -17,6 +17,7 @@ export default function Home() {
   })
   const [filters, setFilters] = useState({})
   const query = useQuery()
+  console.log(query)
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(getCategories())
